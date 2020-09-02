@@ -48,7 +48,7 @@ func run(pass *analysis.Pass) (interface{}, error) {
 
 	// Some Analyzers may need GlobalDebug, in which case we'll have
 	// to set it globally, but let's wait till we need it.
-	mode := ssa.BuilderMode(0)
+	mode := ssa.BuilderMode(ssa.NaiveForm)
 
 	prog := ssa.NewProgram(pass.Fset, mode)
 
